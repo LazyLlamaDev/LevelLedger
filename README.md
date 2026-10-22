@@ -36,9 +36,9 @@ A small minimap button (drag it around the edge) and a few slash commands. Level
 | <img src="docs/images/05_xp_by_level.jpg" alt="Filter and color by level"><br><sub>Filter and color by level</sub> | |
 
 ## Install
+- **CurseForge app:** search for Level Ledger and choose your WoW Forever install.
 - **Wago App:** search for Level Ledger and choose your WoW Forever install.
 - **Manual:** download the zip from CurseForge or Wago and unzip it so the `LevelLedger` folder lands in `World of Warcraft\_classic_beta_\Interface\AddOns`.
-- **CurseForge app:** it doesn't show WoW Forever addons yet (see the FAQ), so use the Wago App or a manual install for now.
 
 Then log in and type `/ledger`, or click the pocket-watch button on the minimap.
 
@@ -53,8 +53,7 @@ Then log in and type `/ledger`, or click the pocket-watch button on the minimap.
 - Bugs & ideas: [GitHub Issues](https://github.com/LazyLlamaDev/LevelLedger/issues). Please include your addon version and any Lua error (BugSack/BugGrabber help).
 
 ## FAQ
-**Level Ledger not showing in the CurseForge app?**
-The CurseForge app doesn't show WoW Forever addons yet. Use the **Wago App** and pick your WoW Forever install, or install it manually: unzip the download so the `LevelLedger` folder lands in `World of Warcraft\_classic_beta_\Interface\AddOns`.
+**Level Ledger not showing in the CurseForge app?** Update the CurseForge app and pick your WoW Forever install.
 
 **Does it know about levels I played before installing it?** No. It records from the moment you install it. Your total `/played` is still shown at the top.
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.1
+- Also released for Retail, Classic Era, Anniversary and Mists Classic.
+- Quest names are found on Classic clients too.
+
 ## v0.2.0
 - Checked against the live WoW Forever 1.60.1 client; Interface stays 16001.
 - Fix: quest names in the XP breakdown now resolve correctly when the quest window title isn't available (uses `C_QuestLog.GetTitleForQuestID`; the old call doesn't exist on Forever).

@@ -237,7 +237,8 @@ function handlers.QUEST_COMPLETE() questTitle = GetTitleText() end
 function handlers.QUEST_TURNED_IN(questID, xp)
   if xp and xp > 0 then
     local title = questTitle
-    if not title and C_QuestLog and C_QuestLog.GetTitleForQuestID then title = C_QuestLog.GetTitleForQuestID(questID) end
+    local getTitle = C_QuestLog and (C_QuestLog.GetTitleForQuestID or C_QuestLog.GetQuestInfo) -- retail/Forever, Classic
+    if not title and getTitle then title = getTitle(questID) end
     addXP("Quest", title or ("Quest " .. questID), xp)
   end
   questTitle = nil

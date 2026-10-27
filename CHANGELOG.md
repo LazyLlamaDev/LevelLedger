@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.0
+- Checked against the live WoW Forever 1.60.1 client; Interface stays 16001.
+- Fix: quest names in the XP breakdown now resolve correctly when the quest window title isn't available (uses `C_QuestLog.GetTitleForQuestID`; the old call doesn't exist on Forever).
+
 ## v0.1.0 — first public beta
 - First public beta for WoW Forever (Interface 16001).
 - Time per level and zone, split by activity: on foot, mounted, flight path, swimming, standing, combat, AFK, dead/ghost, town (vendor, mailbox, auction house, bank, trainer, flight master), crafting, gathering, eating and drinking.

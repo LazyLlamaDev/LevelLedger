@@ -2,7 +2,7 @@
 ## Title: Level Ledger
 ## Notes: Tracks time, XP, kills, quests and deaths per level and zone. Local only.
 ## Author: LazyLlama
-## Version: 0.1.0
+## Version: 0.2.0
 ## X-Website: https://github.com/LazyLlamaDev/LevelLedger
 ## X-License: All Rights Reserved
 ## IconTexture: Interface\Icons\INV_Misc_PocketWatch_01

@@ -4,6 +4,8 @@
 ## Author: LazyLlama
 ## Version: 0.2.0
 ## X-Website: https://github.com/LazyLlamaDev/LevelLedger
+## X-Curse-Project-ID: 1760084
+## X-Wago-ID: j6jAR1NR
 ## X-License: All Rights Reserved
 ## IconTexture: Interface\Icons\INV_Misc_PocketWatch_01
 ## SavedVariables: LevelLedgerDB, LevelLedgerSettings

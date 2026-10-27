@@ -1,0 +1,5 @@
+package-as: LevelLedger
+
+ignore:
+  - README.md
+  - docs

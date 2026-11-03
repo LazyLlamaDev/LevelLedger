@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.2.2
+- Checked against the new WoW Forever client build (1.60.1.70755); Interface stays 16001.
+
 ## v0.2.1
 - Also released for Retail, Classic Era, Anniversary and Mists Classic.
 - Quest names are found on Classic clients too.

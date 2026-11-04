@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.2.3
+- Checked against the new WoW Forever client build (1.60.1.70790); Interface stays 16001.
+
 ## v0.2.2
 - Checked against the new WoW Forever client build (1.60.1.70755); Interface stays 16001.
 

@@ -3,3 +3,7 @@ package-as: LevelLedger
 ignore:
   - README.md
   - docs
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown

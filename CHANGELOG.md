@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.2.4
+- Fixed a Lua error on WoW Forever when the game hides a chat message from addons ("attempt to index local 'msg' (a secret string value)"). Hidden XP messages are skipped.
+
 ## v0.2.3
 - Checked against the new WoW Forever client build (1.60.1.70790); Interface stays 16001.
 

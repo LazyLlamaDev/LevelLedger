@@ -74,7 +74,11 @@ local KILL_PATTERNS = {
 local PAT_EXPLORE = pattern(ERR_ZONE_EXPLORED_XP)
 
 -- The total in the message includes the bonuses, so Mob gets the rest.
+-- Chat text can be a secret value on Forever; it can't be read then, so skip it.
+local function secret(v) return issecretvalue and issecretvalue(v) end
+
 function ns.onKillMsg(msg)
+  if secret(msg) then return end
   for _, p in ipairs(KILL_PATTERNS) do
     if p[1] then
       local caps = { msg:match(p[1]) }
@@ -93,7 +97,7 @@ function ns.onKillMsg(msg)
 end
 
 function ns.onSystemMsg(msg)
-  if not PAT_EXPLORE then return end
+  if not PAT_EXPLORE or secret(msg) then return end
   local area, xp = msg:match(PAT_EXPLORE)
   if area then addXP("Exploration", area, tonumber(xp)) end
 end

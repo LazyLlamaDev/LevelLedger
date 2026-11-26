@@ -144,23 +144,27 @@ local function eatingDrinking()
   return (eat and "Eating") or (drink and "Drinking") or nil
 end
 
+-- Player state can be a secret value on Forever; treat a hidden answer as "no".
+local function is(v) return not secret(v) and v end
+
 -- Main bucket by priority; the first match wins.
 function ns.activity()
-  if UnitIsGhost("player") then return "Ghost" end
-  if UnitIsDead("player") then return "Dead" end
-  if UnitOnTaxi("player") then return "Flight path" end
+  if is(UnitIsGhost("player")) then return "Ghost" end
+  if is(UnitIsDead("player")) then return "Dead" end
+  if is(UnitOnTaxi("player")) then return "Flight path" end
   local ok, g = pcall(gathering) -- spell and aura names can be hidden in combat on newer clients
   g = ok and g
   if g then return g end
-  if UnitAffectingCombat("player") then return "Combat" end
+  if is(UnitAffectingCombat("player")) then return "Combat" end
   -- crafting queues keep counting as crafting even when the game flags you AFK
   if busy == "Crafting" then return busy end
-  if UnitIsAFK("player") then return "AFK" end
+  if is(UnitIsAFK("player")) then return "AFK" end
   if busy then return busy end
-  if IsFlying and IsFlying() then return "Flying" end
-  if IsMounted() then return "Mounted" end
-  if IsSwimming() then return "Swimming" end
-  if GetUnitSpeed("player") > 0 then return "On foot" end
+  if IsFlying and is(IsFlying()) then return "Flying" end
+  if is(IsMounted()) then return "Mounted" end
+  if is(IsSwimming()) then return "Swimming" end
+  local speed = GetUnitSpeed("player")
+  if not secret(speed) and speed > 0 then return "On foot" end
   local ok2, food = pcall(eatingDrinking)
   return (ok2 and food) or "Standing"
 end

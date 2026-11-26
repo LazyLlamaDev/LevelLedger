@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.5
+- Checked against the new WoW Forever client build (1.60.1.71139); Interface stays 16001.
+- Fixed a Lua error on WoW Forever when the game hides your AFK, combat or movement state from addons ("attempt to perform boolean test on a secret boolean value"). A hidden state now counts as not active, so that second falls into the next activity.
+
 ## v0.2.4
 - Fixed a Lua error on WoW Forever when the game hides a chat message from addons ("attempt to index local 'msg' (a secret string value)"). Hidden XP messages are skipped.
 
